@@ -3,15 +3,11 @@ package es.ies;
 
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.util.List;
+
+import es.ies.modeloTxtDB.FileManager;
 
 /**
  *
@@ -345,70 +341,63 @@ public class FrmTiendaApp extends javax.swing.JFrame {
  */
 
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
-        int i = 0;
-        String user = null;
-        String pass;
-        StringBuffer sb = new StringBuffer();
-        char passw[] = txtPass.getPassword();
-        for (int j = 0; j < passw.length; j++) {
-            sb.append(passw[j]);
-        }
-        String password = sb.toString();
+private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
+    int i = 0;
+    String user = null;
+    String pass;
+    StringBuffer sb = new StringBuffer();
+    char passw[] = txtPass.getPassword();
+    for (int j = 0; j < passw.length; j++) {
+        sb.append(passw[j]);
+    }
+    String password = sb.toString();
 
-        File file = new File("usuarios.txt");
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String line;
-            boolean salir = false;
-            File f1 = new File("dbText/nombreAdmin.txt");
-            File f2 = new File("dbText/nombreCli.txt");
-            while ((line = br.readLine()) != null && !salir) {
-                String[] parts = line.split(",");
-                user = parts[0];
-                pass = parts[1];
-                if (user.equals(txtUsuario.getText()) && pass.equals(password)) {
-                    if (user.contains("admin") && password.contains("2019")) {
-                        i = 2;
-                        try (FileWriter fw = new FileWriter(f1)) {
-                            fw.write(user);
-                        }
-                        salir = true;
-                    } else {
-                        i = 1;
-                        try (FileWriter fw = new FileWriter(f2)) {
-                            fw.write(user);
-                        }
-                        salir = true;
-                    }
+    FileManager fileManager = new FileManager();
+    List<String> users = fileManager.readUsers();
+    if (users != null) {
+        boolean salir = false;
+        for (String line : users) {
+            String[] parts = line.split(",");
+            user = parts[0];
+            pass = parts[1];
+            if (user.equals(txtUsuario.getText()) && pass.equals(password)) {
+                if (user.contains("admin") && password.contains("2019")) {
+                    i = 2;
+                    fileManager.writeUser("nombreAdmin.txt", user);
+                    salir = true;
                 } else {
-                    i = 0;
+                    i = 1;
+                    fileManager.writeUser("nombreCli.txt", user);
+                    salir = true;
                 }
+            } else {
+                i = 0;
             }
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Error al leer el archivo de usuarios: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        }
-
-        if (i == 1) {
-            pnlTienda pnlT = new pnlTienda();
-            pnlT.setSize(582, 602);
-            pnlTienda.removeAll();
-            pnlTienda.add(pnlT);
-            pnlTienda.revalidate();
-            pnlTienda.repaint();
-            setTitle("Tienda Cliente: " + user);
-        } else if (i == 2) {
-            pnlTiendaAdmin pnlT = new pnlTiendaAdmin();
-            pnlT.setSize(582, 602);
-            pnlTienda.removeAll();
-            pnlTienda.add(pnlT);
-            pnlTienda.revalidate();
-            pnlTienda.repaint();
-            setTitle("Tienda Administrador: " + user);
-        } else {
-            JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrectos", "Error",
-                    JOptionPane.INFORMATION_MESSAGE);
+            if (salir) break;
         }
     }
+
+    if (i == 1) {
+        pnlTienda pnlT = new pnlTienda();
+        pnlT.setSize(582, 602);
+        pnlTienda.removeAll();
+        pnlTienda.add(pnlT);
+        pnlTienda.revalidate();
+        pnlTienda.repaint();
+        setTitle("Tienda Cliente: " + user);
+    } else if (i == 2) {
+        pnlTiendaAdmin pnlT = new pnlTiendaAdmin();
+        pnlT.setSize(582, 602);
+        pnlTienda.removeAll();
+        pnlTienda.add(pnlT);
+        pnlTienda.revalidate();
+        pnlTienda.repaint();
+        setTitle("Tienda Administrador: " + user);
+    } else {
+        JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrectos", "Error",
+                JOptionPane.INFORMATION_MESSAGE);
+    }
+}
 //GEN-LAST:event_btnLoginActionPerformed
 /**
  * 
