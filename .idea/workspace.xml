@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="29e1ae1d-32e9-4a44-ad36-faf47aa5b900" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/itextpdf_5_5_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credenciales.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/itextpdf-5.5.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/ConectarBD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/ConectorBD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/Empleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/Escritor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/FrmTiendaApp.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/FrmTiendaApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/GenerarPDF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/Lector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/Sorteable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/img/cliente.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/img/emple.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/img/usuario.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlCliente.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlEmpleado.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlEmpleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlEntrarRegistrar.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlEntrarRegistrar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlTienda.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlTienda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlTiendaAdmin.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/pnlTiendaAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trabajo.FinalPOO.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2ldkb8D70OPRt0OyXykJAUmVlwC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.FrmTiendaApp.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Programción/Proyectos/EscolarPOO.Iraides/trabajo.FinalPOO/lib/itextpdf-5.5.13.3.jar",
+    "onboarding.tips.debug.path": "D:/Programción/Proyectos/EscolarPOO.Iraides/trabajo.FinalPOO/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.ies.FrmTiendaApp" />
+      <module name="trabajo.FinalPOO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29e1ae1d-32e9-4a44-ad36-faf47aa5b900" name="Changes" comment="" />
+      <created>1725517412698</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725517412698</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
