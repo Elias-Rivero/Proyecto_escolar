@@ -1,10 +1,7 @@
 
 package es.ies;
 
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -18,7 +15,7 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
 
     DefaultTableModel modeloProductos = new DefaultTableModel();
     DefaultTableModel modelo = new DefaultTableModel();
-    ConectorBD conexion = new ConectorBD();
+    String conexion = "conexion db";
 
     /**
      *Llena las tablas de productos y de usuarios.
@@ -149,10 +146,10 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
         String id = JOptionPane.showInputDialog("Introduce el ID del producto a modificar");
         String nombre = JOptionPane.showInputDialog("Introduce el nombre del producto Nuevo");
 // recoge el Stament devuelto por la conexión
-        try (Statement st = conexion.connec()) {
+        try {
             String sql = "update productos set nombre= '" + nombre + "' where id=" + id;
 // para Insertar, Borrar o Modificar. También se puede usar el métod st.execute (sql);
-            int cont = st.executeUpdate(sql);
+            int cont = 1;
             if (cont == 0) {
                 JOptionPane.showMessageDialog(null, "No existe producto con ese ID", "No se ha podido Modificar",
                         JOptionPane.INFORMATION_MESSAGE);
@@ -160,7 +157,7 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
             modeloProductos.setRowCount(0);
             rellenarProductos();
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
 
@@ -172,10 +169,10 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         String id = JOptionPane.showInputDialog("Introduce el ID del producto a Borrar");
 // recoge el Stament devuelto por la conexión
-        try (Statement st = conexion.connec()) {
+        try  {
             String sql = "delete from productos where id = " + id;
 // para Insertar, Borrar o Modificar. También se puede usar el métod st.execute (sql);
-            int cont = st.executeUpdate(sql);
+            int cont = 1;
             if (cont == 0) {
                 JOptionPane.showMessageDialog(null, "No existe producto con ese ID", "No se ha podido Borrar",
                         JOptionPane.INFORMATION_MESSAGE);
@@ -183,7 +180,7 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
 
             modeloProductos.setRowCount(0);
             rellenarProductos();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
 
@@ -199,13 +196,13 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
         String nombre = JOptionPane.showInputDialog("Introduce el nombre del producto");
         int idEntero = Integer.parseInt(id);
 // recoge el Stament devuelto por la conexión
-        try (Statement st = conexion.connec()) {
+        try  {
             String sql = "insert into productos values(" + idEntero + ",'" + nombre + "',null)";
 // para Insertar, Borrar o Modificar. También se puede usar el métod st.execute (sql);
             int cont = 0;
             try {
-                cont = st.executeUpdate(sql);
-            } catch (SQLException sQLException) {
+                cont = 1;
+            } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "No se ha insertado", "Error en la insercion",
                         JOptionPane.INFORMATION_MESSAGE);
             }
@@ -216,7 +213,7 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
             modeloProductos.setRowCount(0);
             rellenarProductos();
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_btnInsertActionPerformed
@@ -229,12 +226,12 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
 
         String id = JOptionPane.showInputDialog("Introduce el ID del Cliente a Borrar");
 // recoge el Stament devuelto por la conexión
-        try (Statement st = conexion.connec()) {
+        try  {
             String sql = "delete from clientes where usuario = '" + id+"'";
             String sql3 = "delete from persona where username = '" + id+"'";
 // para Insertar, Borrar o Modificar. También se puede usar el métod st.execute (sql);
-            int cont = st.executeUpdate(sql);
-            int cont3 = st.executeUpdate(sql3);
+            int cont = 1;
+            int cont3 = 1;
             if (cont == 0 && cont3 == 0) {
                 JOptionPane.showMessageDialog(null, "No existe Cliente con ese ID", "No se ha podido Borrar",
                         JOptionPane.INFORMATION_MESSAGE);
@@ -242,7 +239,7 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
 
             modelo.setRowCount(0);
             rellenarPersonas();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
 
@@ -256,12 +253,12 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
     private void btnBorAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorAdmActionPerformed
         String id = JOptionPane.showInputDialog("Introduce el ID del Empleado a Borrar");
 // recoge el Stament devuelto por la conexión
-        try (Statement st = conexion.connec()) {
+        try {
             String sql = "delete from empleados where usuario = '"+ id+"'";
             String sql3 = "delete from persona where username = '"+ id+"'";
 // para Insertar, Borrar o Modificar. También se puede usar el métod st.execute (sql);
-            int cont = st.executeUpdate(sql);
-            int cont3 = st.executeUpdate(sql3);
+            int cont = 1;
+            int cont3 = 1;
             if (cont == 0 && cont3 == 0) {
                 JOptionPane.showMessageDialog(null, "No existe Empleado con ese ID", "No se ha podido Borrar",
                         JOptionPane.INFORMATION_MESSAGE);
@@ -269,7 +266,7 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
 
             modelo.setRowCount(0);
             rellenarPersonas();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_btnBorAdmActionPerformed
@@ -281,28 +278,30 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
         JTable tabla = new JTable(modelo);
 
 // recoge el Stament devuelto por la conexión
-        try (Statement st = conexion.connec()) {
+        try {
             String sql = "select * from persona";
 // para Insertar, Borrar o Modificar. También se puede usar el métod st.execute (sql);
-            ResultSet rs = st.executeQuery(sql);
-            ResultSetMetaData metaDatos = rs.getMetaData();
+
+
             // Se obtiene el número de columnas.
-            int numeroColumnas = metaDatos.getColumnCount();
+            int numeroColumnas = 1;
 // Se crea un array de etiquetas para rellenar
             Object[] etiquetas = new Object[numeroColumnas];
 // Se obtiene cada una de las etiquetas para cada columna
             for (int i = 0; i < numeroColumnas; i++) {
                 // Para ResultSetMetaData la primera columna es la 1. 
-                etiquetas[i] = metaDatos.getColumnLabel(i + 1);
+                continue;
             }
             modelo.setColumnIdentifiers(etiquetas);
-            while (rs.next()) {
+            int n =0;
+            while (n < 3) {
                 Object[] fila = new Object[numeroColumnas];  //numeroColumnas es el número de columnas de la tabla y del ResultSet
                 for (int i = 0; i < numeroColumnas; i++) {
-                    fila[i] = rs.getObject(i + 1); // El ResultSet comienza en 1 en vez de en 0
+                    fila[i] = "";
                 }
 
                 modelo.addRow(fila);
+                n++;
             }
             // Se añade al modelo la fila completa.
         } catch (Exception e) {
@@ -322,24 +321,26 @@ public final class pnlTiendaAdmin extends javax.swing.JPanel {
         JTable tablaProductos = new JTable(modeloProductos);
 
 // recoge el Stament devuelto por la conexión
-        try (Statement st = conexion.connec()) {
+        try {
             String sqlProductos = "select ID ,NOMBRE ,TO_CHAR(fecha_cad)\"Fecha de Caducidad\" from productos order by id";
 
-            ResultSet rsProductos = st.executeQuery(sqlProductos);
-            ResultSetMetaData metaDatosProductos = rsProductos.getMetaData();
-            int numeroColumnasP = metaDatosProductos.getColumnCount();
+
+
+            int numeroColumnasP = 1;
             Object[] etiquetasP = new Object[numeroColumnasP];
             for (int i = 0; i < numeroColumnasP; i++) {
                 // Para ResultSetMetaData la primera columna es la 1. 
-                etiquetasP[i] = metaDatosProductos.getColumnLabel(i + 1);
+                etiquetasP[i] = 1;
             }
             modeloProductos.setColumnIdentifiers(etiquetasP);
-            while (rsProductos.next()) {
+            int n =0;
+            while (n < 3) {
                 Object[] filaP = new Object[numeroColumnasP];  //numeroColumnas es el número de columnas de la tabla y del ResultSet
                 for (int i = 0; i < numeroColumnasP; i++) {
-                    filaP[i] = rsProductos.getObject(i + 1); // El ResultSet comienza en 1 en vez de en 0
+                    filaP[i] = 1; // El ResultSet comienza en 1 en vez de en 0
                 }
                 modeloProductos.addRow(filaP);
+                n++;
             }
             // Se añade al modelo la fila completa.
         } catch (Exception e) {

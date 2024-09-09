@@ -18,14 +18,14 @@ import java.io.IOException;
  */
 public class Lector {
 
-    File f;
+    File file;
 
     /**
      *
-     * @param f
+     * @param file
      */
-    public Lector(File f) {
-        this.f = f;
+    public Lector(File file) {
+        this.file = file;
     }
 //busca e imprime objetos de un fichero
 
@@ -37,7 +37,7 @@ public class Lector {
     public String verContenido() {
         BufferedReader ois = null;
         try {
-            ois = new BufferedReader(new FileReader(f));
+            ois = new BufferedReader(new FileReader(file));
                 return ois.readLine();
         } catch (EOFException eof) {
             System.out.println("Fichero acabado");

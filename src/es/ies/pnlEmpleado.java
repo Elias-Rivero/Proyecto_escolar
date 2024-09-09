@@ -1,7 +1,6 @@
 package es.ies;
 
-import java.sql.Statement;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  *
@@ -322,7 +321,6 @@ public class pnlEmpleado extends javax.swing.JPanel {
             emple.setPuesto(Integer.parseInt(txtPuesto.getText()));
 
             // realiza la conexión con la BD
-            ConectorBD conexion = new ConectorBD();
             String sql = "insert into empleados values( '" + emple.getIdEmpleado()
                     + "','" + emple.getNombre()+sexo
                     + "','" + emple.getTelefono()
@@ -332,11 +330,8 @@ public class pnlEmpleado extends javax.swing.JPanel {
             String sql2 = "insert into persona values( '" + emple.getIdEmpleado()
                     + "','" + password1
                     + "')";
-// recoge el Stament devuelto por la conexión
-            try (Statement st = conexion.connec()) {
-// para Insertar, Borrar o Modificar. También se puede usar el métod st.execute (sql);
-                st.executeUpdate(sql2);
-                st.executeUpdate(sql);
+
+            try  {
 
                 JOptionPane.showMessageDialog(null, "Operación realizada con éxito", "Sentencia SQL",
                         JOptionPane.INFORMATION_MESSAGE);

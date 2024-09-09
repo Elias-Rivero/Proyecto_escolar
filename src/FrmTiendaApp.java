@@ -1,30 +1,29 @@
+import es.ies.Escritor;
+import es.ies.Lector;
+import es.ies.View.TiendaPanel;
+import es.ies.modeloTxtDB.FileManager;
+import es.ies.pnlEntrarRegistrar;
+import es.ies.pnlTiendaAdmin;
 
-package es.ies;
-
+import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
+import java.io.IOException;
 import java.util.List;
-
-import es.ies.modeloTxtDB.FileManager;
 
 /**
  *
  * @author Jorge
  */
 public class FrmTiendaApp extends javax.swing.JFrame {
+    private FileManager fileManager = new FileManager();
 
-    /**
-     *El constructor crea el frame y el fichero para recordar los datos.
-     */
     public FrmTiendaApp() {
-//jdbc:oracle:thin:@localhost:1521:XE [tienda on Default schema]
 
-        File f = new File("credenciales.txt");
+        File f = new File(this.fileManager.dbpath+"credenciales.txt");
         Lector lec = new Lector(f);
 
-        ImageIcon img = new ImageIcon("usuario.png");
+        ImageIcon img = new ImageIcon(this.fileManager.Cpath.getDinamicResourceTypePath("img")+"usuario.jpg");
         setIconImage(img.getImage());
         setLocationRelativeTo(null);
         setTitle("Iniciar Sesión");
@@ -91,7 +90,7 @@ public class FrmTiendaApp extends javax.swing.JFrame {
             }
         });
 
-        lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/ies/img/usuario.png"))); // NOI18N
+        lblImagen.setIcon(new javax.swing.ImageIcon(this.fileManager.Cpath.getDinamicResourceTypePath("img")+"usuario.jpg")); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel1.setText(" INICIAR SESIÓN");
@@ -123,7 +122,11 @@ public class FrmTiendaApp extends javax.swing.JFrame {
         });
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
+                try {
+                    btnLoginActionPerformed(evt);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
         btnLogin.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -317,7 +320,7 @@ public class FrmTiendaApp extends javax.swing.JFrame {
 
         if (chkRecordar.isSelected()) {
 
-            File f = new File("credenciales.txt");
+            File f = new File(this.fileManager.dbpath+"credenciales.txt");
             Escritor esc = new Escritor(f);
 
             StringBuffer sb = new StringBuffer();
@@ -341,7 +344,7 @@ public class FrmTiendaApp extends javax.swing.JFrame {
  */
 
 
-private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
+private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
     int i = 0;
     String user = null;
     String pass;
@@ -352,7 +355,7 @@ private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
     }
     String password = sb.toString();
 
-    FileManager fileManager = new FileManager();
+
     List<String> users = fileManager.readUsers();
     if (users != null) {
         boolean salir = false;
@@ -363,11 +366,11 @@ private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
             if (user.equals(txtUsuario.getText()) && pass.equals(password)) {
                 if (user.contains("admin") && password.contains("2019")) {
                     i = 2;
-                    fileManager.writeUser("nombreAdmin.txt", user);
+                    this.fileManager.writeUser(this.fileManager.dbpath+"nombreAdmin.txt", user);
                     salir = true;
                 } else {
                     i = 1;
-                    fileManager.writeUser("nombreCli.txt", user);
+                    this.fileManager.writeUser(this.fileManager.dbpath+"nombreCli.txt", user);
                     salir = true;
                 }
             } else {
@@ -378,7 +381,7 @@ private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
     }
 
     if (i == 1) {
-        pnlTienda pnlT = new pnlTienda();
+        TiendaPanel pnlT = new TiendaPanel();
         pnlT.setSize(582, 602);
         pnlTienda.removeAll();
         pnlTienda.add(pnlT);
@@ -421,7 +424,7 @@ private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
  */
     private void btnDejarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDejarActionPerformed
 
-        File f = new File("credenciales.txt");
+        File f = new File(this.fileManager.dbpath+"credenciales.txt");
         f.delete();
         txtUsuario.setText("");
         txtPass.setText("");

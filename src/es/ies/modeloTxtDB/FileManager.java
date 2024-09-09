@@ -1,5 +1,7 @@
 package es.ies.modeloTxtDB;
 
+import es.ies.Controller.ControllerPath;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,10 +10,11 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class FileManager {
-    private String pathDBFiles = "dbText/";
-    private String adminFilePath = pathDBFiles+"nombreAdmin.txt";
-    private String clientFilePath = pathDBFiles+"nombreCli.txt";
-    private String usersFilePath = pathDBFiles+"usuarios.txt";
+    public ControllerPath Cpath = new ControllerPath();
+    public String dbpath = Cpath.getDinamicResourceTypePath("dbUsersText");
+    private String adminFilePath = dbpath+"nombreAdmin.txt";
+    private String clientFilePath = dbpath+"nombreCli.txt";
+    private String usersFilePath = dbpath+"usuarios.txt";
 
     public FileManager() {
         createFileIfNotExists(adminFilePath);
@@ -20,7 +23,7 @@ public class FileManager {
         createDefaultAdminUser();
     }
 
-    private void createFileIfNotExists(String filePath) {
+    protected void createFileIfNotExists(String filePath) {
         File file = new File(filePath);
         if (!file.exists()) {
             try {
@@ -47,7 +50,6 @@ public class FileManager {
             System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
     }
-
     private void createDefaultAdminUser() {
         List<String> users = readUsers();
         boolean adminExists = false;
@@ -69,6 +71,5 @@ public class FileManager {
             }
         }
     }
-
 }
 

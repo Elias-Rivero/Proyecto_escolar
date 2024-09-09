@@ -1,18 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e1ae1d-32e9-4a44-ad36-faf47aa5b900" name="Changes" comment="primer commit" />
+    <list default="true" id="29e1ae1d-32e9-4a44-ad36-faf47aa5b900" name="Changes" comment="primer commit">
+      <change afterPath="$PROJECT_DIR$/cimientoYestructura.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fichero.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/cimientoYestructura.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/cubiertasYtecho.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/paredesYfachadas.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/pisoYrevestimiento.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/dbUsersText/credenciales.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/dbUsersText/nombreAdmin.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/dbUsersText/nombreCli.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/dbUsersText/usuarios.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/1725852037035.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/1725852037054.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/1725852121111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/1725852121141.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Elias fotos/Cconstruccion(5).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Elias fotos/construccion(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Elias fotos/construccion(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Elias fotos/construccion(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Elias fotos/userfoto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Elias fotos/usuario.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Elias fotos/usuario.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/cliente.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/emple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/usuario.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FrmTiendaApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/Controller/ControllerPath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/View/PanelRound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/View/TiendaPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/modeloTxtDB/Material.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/ies/modeloTxtDB/ProductsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbText/nombreAdmin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbText/nombreCli.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbText/usuarios.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/ConectarBD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/ConectorBD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/Escritor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/Escritor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/FrmTiendaApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/GenerarPDF.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/Lector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/Lector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/img/Elias fotos/Cconstruccion(5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/img/Elias fotos/construccion(1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/img/Elias fotos/construccion(2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/img/Elias fotos/construccion(3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/img/Elias fotos/construccion(4).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/img/Elias fotos/userfoto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/img/cliente.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/img/emple.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/img/usuario.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/modeloTxtDB/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/modeloTxtDB/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/pnlCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/pnlCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/pnlEmpleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/pnlEmpleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/pnlEntrarRegistrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/pnlEntrarRegistrar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/pnlTienda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/pnlTienda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/ies/pnlTiendaAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/ies/pnlTiendaAdmin.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -31,32 +97,126 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.FrmTiendaApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Programción/Proyectos/EscolarPOO.Iraides/trabajo.FinalPOO/lib/itextpdf-5.5.13.3.jar&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Programción/Proyectos/EscolarPOO.Iraides/trabajo.FinalPOO/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.FrmTiendaApp.executor": "Run",
+    "Application.PanelProductos.executor": "Run",
+    "Application.ProductsManager (1).executor": "Run",
+    "Application.ProductsManager.executor": "Run",
+    "Application.TiendaPanel (1).executor": "Run",
+    "Application.TiendaPanel (2).executor": "Run",
+    "Application.TiendaPanel (3).executor": "Run",
+    "Application.TiendaPanel.executor": "Run",
+    "Application.TiendaPanels (1).executor": "Run",
+    "Application.TiendaPanels.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Application.es.ies.View.TiendaPanel.executor": "Run",
+    "Application.xcx.TiendaPanel.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Programción/Proyectos/EscolarPOO.Iraides/trabajo.FinalPOO/lib/itextpdf-5.5.13.3.jar",
+    "onboarding.tips.debug.path": "D:/Programción/Proyectos/EscolarPOO.Iraides/trabajo.FinalPOO/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="es.ies.FrmTiendaApp" />
+}]]></component>
+  <component name="RunManager" selected="Application.FrmTiendaApp">
+    <configuration name="FrmTiendaApp" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FrmTiendaApp" />
       <module name="trabajo.FinalPOO" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PanelProductos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.ies.View.PanelProductos" />
+      <module name="trabajo.FinalPOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsManager (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.ies.modeloTxtDB.ProductsManager" />
+      <module name="trabajo.FinalPOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.modeloTxtDB.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.ies.modeloTxtDB.ProductsManager" />
+      <module name="trabajo.FinalPOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.modeloTxtDB.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TiendaPanel (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.ies.View.TiendaPanel" />
+      <module name="trabajo.FinalPOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TiendaPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.ies.View.TiendaPanel" />
+      <module name="trabajo.FinalPOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.FrmTiendaApp" />
+      <item itemvalue="Application.PanelProductos" />
+      <item itemvalue="Application.ProductsManager" />
+      <item itemvalue="Application.ProductsManager (1)" />
+      <item itemvalue="Application.TiendaPanel" />
+      <item itemvalue="Application.TiendaPanel (3)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProductsManager (1)" />
+        <item itemvalue="Application.ProductsManager" />
+        <item itemvalue="Application.PanelProductos" />
+        <item itemvalue="Application.TiendaPanel (3)" />
+        <item itemvalue="Application.TiendaPanel" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,5 +261,80 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="primer commit" />
     <option name="LAST_COMMIT_MESSAGE" value="primer commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/es/ies/View/TiendaPanel.java</url>
+          <line>80</line>
+          <properties class="es.ies.View.TiendaPanel" method="crearItemProducto">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>386</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>387</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>388</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>389</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>390</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>391</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>392</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>395</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>394</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>393</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>383</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FrmTiendaApp.java</url>
+          <line>382</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

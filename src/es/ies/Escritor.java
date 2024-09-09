@@ -12,14 +12,14 @@ import java.io.IOException;
  */
 public class Escritor {
 
-    File f;
+    File file;
 
     /**
      *
-     * @param f
+     * @param file
      */
-    public Escritor(File f) {
-        this.f = f;
+    public Escritor(File file) {
+        this.file = file;
     }
 
     /**
@@ -29,7 +29,7 @@ public class Escritor {
      */
     public void escribe(String cj) {
 
-        try (BufferedWriter oos = new BufferedWriter(new FileWriter(f))) {
+        try (BufferedWriter oos = new BufferedWriter(new FileWriter(file))) {
             if (cj != null) {
                 oos.write(cj);
                 oos.flush();

@@ -1,12 +1,14 @@
 
 package es.ies;
 
+import es.ies.modeloTxtDB.FileManager;
+
 /**
  *
  * @author Jorge
  */
 public class pnlEntrarRegistrar extends javax.swing.JPanel {
-
+    private FileManager fileManager = new FileManager();
     /**
      * Creates new form pnlEntrarRegistrar
      */
@@ -48,9 +50,9 @@ public class pnlEntrarRegistrar extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/ies/img/cliente.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(this.fileManager.Cpath.getDinamicResourceTypePath("img")+"cliente.png")); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/ies/img/emple.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(this.fileManager.Cpath.getDinamicResourceTypePath("img")+"emple.png")); // NOI18N
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
