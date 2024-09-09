@@ -13,7 +13,7 @@ public class ControllerPath {
         this.productsPath = getProductsPath();
     }
 
-
+//obtener ruta//
     private String getProjectPath() {
         if (this.executionPath.substring(this.executionPath.length()-3)=="src") {
             return this.executionPath.substring(0,

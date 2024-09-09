@@ -1,6 +1,6 @@
 package es.ies.modeloTxtDB;
 
-public class  Material {
+public class Material {
     private final int id;
     private final String nombre;
     private final double peso;
@@ -9,7 +9,8 @@ public class  Material {
     private final String tiempoEntrega;
     private final int cantidadDisponible;
 
-    public Material(int id, String nombre, double peso, String dimensiones, double precio, String tiempoEntrega, int cantidadDisponible) {
+    public Material(int id, String nombre, double peso, String dimensiones, double precio, String tiempoEntrega,
+            int cantidadDisponible) {
         this.id = id;
         this.nombre = nombre;
         this.peso = peso;
@@ -19,6 +20,7 @@ public class  Material {
         this.cantidadDisponible = cantidadDisponible;
     }
 
+    // Obtener id
     public int getId() {
         return id;
     }
@@ -49,6 +51,7 @@ public class  Material {
 
     @Override
     public String toString() {
-        return id + "," + nombre + "," + peso + "," + dimensiones + "," + precio + "," + tiempoEntrega + "," + cantidadDisponible;
+        return id + "," + nombre + "," + peso + "," + dimensiones + "," + precio + "," + tiempoEntrega + ","
+                + cantidadDisponible;
     }
 }
