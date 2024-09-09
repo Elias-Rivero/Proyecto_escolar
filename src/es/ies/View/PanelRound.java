@@ -75,6 +75,7 @@ public class PanelRound extends JPanel {
         g2.dispose();
         super.paintComponent(grphcs);
     }
+    // Boton superior izquierdo//
 
     private Shape createRoundTopLeft() {
         int width = getWidth();
@@ -87,6 +88,7 @@ public class PanelRound extends JPanel {
         return area;
     }
 
+    // Boton superior derercho//
     private Shape createRoundTopRight() {
         int width = getWidth();
         int height = getHeight();
@@ -98,6 +100,7 @@ public class PanelRound extends JPanel {
         return area;
     }
 
+    // Creando el boton izquierdo//
     private Shape createRoundBottomLeft() {
         int width = getWidth();
         int height = getHeight();
@@ -109,6 +112,7 @@ public class PanelRound extends JPanel {
         return area;
     }
 
+    // Creando el boton derecho//
     private Shape createRoundBottomRight() {
         int width = getWidth();
         int height = getHeight();

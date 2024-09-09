@@ -6,10 +6,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- *
- * @author Jorge
- */
 public class Escritor {
 
     File file;
@@ -25,7 +21,7 @@ public class Escritor {
     /**
      *
      * @param cj
-     * escribe un objeto en un fichero comprobando si esta vacio o no
+     *           escribe un objeto en un ficheros comprobando si esta vacio o no
      */
     public void escribe(String cj) {
 
