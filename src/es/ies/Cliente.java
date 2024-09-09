@@ -1,14 +1,16 @@
 package es.ies;
 
 import javax.swing.JOptionPane;
+
 public class Cliente extends Persona implements Sorteable {
 
     private String idCliente;
-    static int numCompras=0;
+    static int numCompras = 0;
 
     public Cliente() {
         contador++;
     }
+
     public Cliente(String idCliente, int numCompras, String nombre,
             String direccion, String telefono) {
         super(nombre, direccion, telefono);
@@ -19,7 +21,7 @@ public class Cliente extends Persona implements Sorteable {
         } else {
             this.idCliente = generarId();
         }
-        if (participarSorteo(idCliente,numCompras)) {
+        if (participarSorteo(idCliente, numCompras)) {
             JOptionPane.showMessageDialog(null, "Ha ganado el sorteo",
                     "ID de cliente: " + this.idCliente,
                     JOptionPane.INFORMATION_MESSAGE);
@@ -38,9 +40,10 @@ public class Cliente extends Persona implements Sorteable {
         return numCompras;
     }
 
+    // asignar numero de compra//
     public void setNumCompras(int numCompras) {
         this.numCompras = numCompras;
-        if (participarSorteo(idCliente,numCompras)) {
+        if (participarSorteo(idCliente, numCompras)) {
             JOptionPane.showMessageDialog(null, "Ha ganado el sorteo",
                     "ID de cliente: " + this.idCliente,
                     JOptionPane.INFORMATION_MESSAGE);
@@ -53,16 +56,24 @@ public class Cliente extends Persona implements Sorteable {
 
     @Override
     public boolean validarId(String id) {
-        if (id.length() <5) {return false;} else {return true;}
+        if (id.length() < 5) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override
-    public boolean participarSorteo(String idCliente,int num) {
+    public boolean participarSorteo(String idCliente, int num) {
         int var = 0;
         if (numCompras > 10) {
             var = (int) (Math.random() * 2);
         }
-        if (var == 1) {return true;} else {return false;}
+        if (var == 1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
