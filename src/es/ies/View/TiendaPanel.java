@@ -1,6 +1,5 @@
 package es.ies.View;
 
-
 import es.ies.modeloTxtDB.ProductsManager;
 
 import javax.swing.*;
@@ -34,18 +33,18 @@ public class TiendaPanel extends JPanel {
         setSize(700, 800);
 
         // Ejemplo de productos
-        /*Producto[] productos = {
-                new Producto("Producto 1", 1.2, 10, "10x10x10", "2 días", "ruta/a/imagen1.jpg"),
-                new Producto("Producto 2", 0.5, 5, "5x5x5", "1 día", "ruta/a/imagen2.jpg"),
-                new Producto("Producto 2", 0.5, 5, "5x5x5", "1 día", "ruta/a/imagen2.jpg")
-        };
-
-        */
-
+        /*
+         * Producto[] productos = {
+         * new Producto("Producto 1", 1.2, 10, "10x10x10", "2 días",
+         * "ruta/a/imagen1.jpg"),
+         * new Producto("Producto 2", 0.5, 5, "5x5x5", "1 día", "ruta/a/imagen2.jpg"),
+         * new Producto("Producto 2", 0.5, 5, "5x5x5", "1 día", "ruta/a/imagen2.jpg")
+         * };
+         * 
+         */
 
         JPanel comprarButtonPanel = new JPanel();
         comprarButtonPanel.setLayout(new BoxLayout(tituloPanel, BoxLayout.Y_AXIS));
-
 
         JButton comprarButton = new JButton("Comprar");
         comprarButton.addActionListener(new ActionListener() {
@@ -67,10 +66,11 @@ public class TiendaPanel extends JPanel {
         });
         comprarButton.setMargin(new Insets(6, 10, 6, 10));
 
-        /*comprarButtonPanel.add(comprarButton);
-        comprarButtonPanel.setBorder(new EmptyBorder(10,30,50,30));*/
+        /*
+         * comprarButtonPanel.add(comprarButton);
+         * comprarButtonPanel.setBorder(new EmptyBorder(10,30,50,30));
+         */
         add(comprarButton);
-
 
         for (Object producto : pPath.getAllMaterials()) {
             System.out.println();
@@ -81,13 +81,13 @@ public class TiendaPanel extends JPanel {
     private JPanel crearItemProducto(Producto producto) {
         JPanel panel = new JPanel();
         PanelRound panelRound = new PanelRound();
-        panelRound.setBorder(new EmptyBorder(15,15,15,15));
+        panelRound.setBorder(new EmptyBorder(15, 15, 15, 15));
         panelRound.setBackground(new Color(53, 64, 81));
         panelRound.setRoundBottomLeft(25);
         panelRound.setRoundBottomRight(25);
         panelRound.setRoundTopRight(25);
         panelRound.setRoundTopLeft(25);
-        panelRound.setSize(600,80);
+        panelRound.setSize(600, 80);
 
         panelRound.setLayout(new FlowLayout());
 
@@ -95,7 +95,7 @@ public class TiendaPanel extends JPanel {
         JComboBox<Integer> comboBox = new JComboBox<>();
         comboBox.setEnabled(false);
         JPanel panelComboBox = new JPanel();
-        panelComboBox.setBorder(new EmptyBorder(2,7,2,10));
+        panelComboBox.setBorder(new EmptyBorder(2, 7, 2, 10));
         panelComboBox.add(comboBox);
 
         for (int i = 1; i <= producto.cantidadDisponible; i++) {
@@ -114,7 +114,7 @@ public class TiendaPanel extends JPanel {
         JLabel dimensionesLabel = new JLabel("Dimensiones: " + producto.dimensiones);
         JLabel tiempoEntregaLabel = new JLabel("Tiempo de entrega: " + producto.tiempoEntrega);
         JLabel imagenLabel = new JLabel(new ImageIcon(producto.rutaImagen));
-
+        // adding//
 
         panelRound.add(imagenLabel);
         panelRound.add(nombreLabel);
@@ -125,10 +125,8 @@ public class TiendaPanel extends JPanel {
         panelRound.add(panelComboBox);
         panelRound.add(checkBox);
 
-        panel.setBorder(new EmptyBorder(2,10,2,10));
+        panel.setBorder(new EmptyBorder(2, 10, 2, 10));
         panel.add(panelRound, NORTH);
-
-
 
         return panel;
     }
@@ -152,7 +150,8 @@ class Producto {
     int cantidadDisponible;
     String rutaImagen;
 
-    public Producto(String nombre, double peso, String dimensiones, float precio, String tiempoEntrega, int cantidadDisponible, String rutaImagen) {
+    public Producto(String nombre, double peso, String dimensiones, float precio, String tiempoEntrega,
+            int cantidadDisponible, String rutaImagen) {
         this.nombre = nombre;
         this.peso = peso;
         this.dimensiones = dimensiones;

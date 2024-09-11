@@ -80,7 +80,6 @@ public class ProductsManager {
         return materialArray;
     }
 
-    // Agregando categoriìas
     public void agregarCategoria(String nombreCategoria) {
         categorias.put(nombreCategoria, new ArrayList<>());
     }
